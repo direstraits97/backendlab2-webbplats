@@ -1,1 +1,118 @@
 @use "base";
+
+body {
+  background-image: linear-gradient(
+    to left,
+    base.$color-background-primary,
+    base.$color-background-secondary
+  );
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8em;
+  font-family: base.$font-content;
+}
+header {
+  background-color: base.$color-background-quaternary;
+  padding: 2%;
+  img {
+    width: 250px;
+    height: 250px;
+  }
+  #topheader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: base.$color-text-secondary;
+  }
+}
+nav {
+  font-family: base.$font-content;
+  background-color: base.$color-background-primary;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+  }
+}
+a {
+  color: base.$color-text-primary;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  font-size: 2.8rem;
+  font-family: base.$font-title;
+}
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 50px;
+}
+footer {
+  background-color: base.$color-background-tertiary;
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  background-color: base.$color-background-quaternary;
+  padding: 2%;
+  border-radius: 10px;
+  color: base.$color-text-secondary;
+}
+input {
+  font-family: base.$font-content;
+  font-size: 1rem;
+}
+textarea {
+  font-family: base.$font-content;
+  height: 150px;
+  font-size: 1rem;
+}
+#addform {
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 20%;
+  min-width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  font-family: base.$font-content;
+  font-size: 1rem;
+}
+.about {
+  background-color: base.$color-background-quaternary;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  color: base.$color-text-secondary;
+  border-radius: 10px;
+  padding: 1.5%;
+  margin-top: 70px;
+}
+.lastabout {
+  margin-bottom: 100px;
+}

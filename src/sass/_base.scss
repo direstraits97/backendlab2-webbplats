@@ -1,0 +1,18 @@
+@use "sass:color";
+
+//Färger
+
+$color-background-primary: #fff7ff;
+$color-background-secondary: #682a9b;
+$color-background-tertiary: #a087b0;
+$color-background-quaternary: color.scale(
+  $color-background-secondary,
+  $lightness: -60%
+);
+
+$color-text-primary: black;
+$color-text-secondary: white;
+
+//Fonter
+$font-title: "Petit Formal Script", cursive;
+$font-content: "Roboto", sans-serif;
