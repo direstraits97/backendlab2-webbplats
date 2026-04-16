@@ -1,0 +1,36 @@
+@use "sass:color";
+
+//Färger
+
+$color-background-primary: #fff7ff;
+$color-background-secondary: #682a9b;
+$color-background-tertiary: #a087b0;
+$color-background-quaternary: color.scale(
+  $color-background-secondary,
+  $lightness: -60%
+);
+
+$color-text-primary: black;
+$color-text-secondary: white;
+
+$color-error: rgb(92, 21, 21);
+$color-error-hover: rgb(141, 25, 25);
+$color-confirm: rgb(8, 49, 8);
+
+//Fonter
+$font-title: "Petit Formal Script", cursive;
+$font-content: "Roboto", sans-serif;
+
+//Placeholders
+%centerchild {
+  margin-left: auto;
+  margin-right: auto;
+}
+%flexandcolumn {
+  display: flex;
+  flex-direction: column;
+}
+%flexandalign {
+  display: flex;
+  align-items: center;
+}

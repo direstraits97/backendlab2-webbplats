@@ -1,1 +1,160 @@
 @use "base";
+
+body {
+  background-image: linear-gradient(
+    to left,
+    base.$color-background-primary,
+    base.$color-background-secondary
+  );
+  margin: 0;
+  height: 100vh;
+  @extend %flexandcolumn;
+  line-height: 1.8em;
+  font-family: base.$font-content;
+}
+header {
+  background-color: base.$color-background-quaternary;
+  padding: 2%;
+  img {
+    width: 250px;
+    height: 250px;
+  }
+  #topheader {
+    @extend %flexandalign;
+    justify-content: space-around;
+    color: base.$color-text-secondary;
+  }
+}
+nav {
+  font-family: base.$font-content;
+  background-color: base.$color-background-primary;
+  width: 60%;
+  @extend %centerchild;
+  border-radius: 10px;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+  }
+}
+a {
+  color: base.$color-text-primary;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  font-size: 2.8rem;
+  font-family: base.$font-title;
+}
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+footer {
+  background-color: base.$color-background-tertiary;
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  border-top: 3px solid base.$color-background-primary;
+}
+form {
+  @extend %flexandcolumn;
+  width: 35%;
+  @extend %centerchild;
+  border: 3px solid base.$color-background-primary;
+  margin-bottom: 100px;
+  background-color: base.$color-background-quaternary;
+  padding: 2%;
+  border-radius: 10px;
+  color: base.$color-text-secondary;
+}
+input {
+  font-family: base.$font-content;
+  font-size: 1rem;
+}
+textarea {
+  @extend input;
+  height: 150px;
+}
+#addform {
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 20%;
+  min-width: 130px;
+  @extend %flexandalign;
+  justify-content: center;
+  @extend %centerchild;
+  margin-top: 30px;
+  font-family: base.$font-content;
+  font-size: 1rem;
+  background-color: base.$color-background-tertiary;
+}
+#addform:hover {
+  background-color: base.$color-background-primary;
+  cursor: pointer;
+}
+.about {
+  background-color: base.$color-background-quaternary;
+  color: base.$color-text-secondary;
+}
+
+article {
+  width: 40%;
+  @extend %centerchild;
+  background-color: base.$color-background-tertiary;
+  border-radius: 10px;
+  padding: 1.5%;
+  border: 3px solid base.$color-background-primary;
+  margin-bottom: 80px;
+}
+.deleteform {
+  @extend #addform;
+  background-color: base.$color-error;
+  color: base.$color-text-secondary;
+}
+.deleteform:hover {
+  background-color: base.$color-error-hover;
+}
+#errorcontainer p {
+  background-color: base.$color-error;
+  padding: 1%;
+  border-radius: 5px;
+}
+#confirmcontainer p {
+  background-color: base.$color-confirm;
+  padding: 1%;
+  border-radius: 5px;
+}
+#smallscreenheading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2.5rem;
+  display: none;
+}
+#openmenu {
+  border: none;
+  background: none;
+  display: none;
+  img {
+    width: 110px;
+    height: 110px;
+  }
+}
+#closemenu {
+  @extend #openmenu;
+}
+#menuchoice {
+  display: none;
+}
+.show {
+  right: 0;
+}
