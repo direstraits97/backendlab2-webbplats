@@ -15,6 +15,7 @@ async function getData() {
 
 function printExperience(info) {
   const experienceContainer = document.querySelector("#collectedexperience");
+  experienceContainer.innerHTML = "";
 
   info.forEach((workexperience) => {
     const articleEl = document.createElement("article");
@@ -58,4 +59,12 @@ function printExperience(info) {
 
     experienceContainer.appendChild(articleEl);
   });
+}
+
+async function deleteExperience(id) {
+  let response = await fetch(url + id, {
+    method: "DELETE",
+  });
+  let jsonResponse = await response.json();
+  printExperience(jsonResponse);
 }
