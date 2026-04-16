@@ -26,7 +26,11 @@ function printExperience(info) {
     const timeHolder = document.createElement("h4");
     const deleteButton = document.createElement("button");
     const deleteText = document.createTextNode("Radera");
+    const deleteIcon = document.createElement("img");
+    deleteIcon.setAttribute("src", "/ikoner/delete.svg");
+    deleteIcon.setAttribute("alt", "");
     deleteButton.appendChild(deleteText);
+    deleteButton.appendChild(deleteIcon);
     deleteButton.classList.add("deleteform");
     deleteButton.addEventListener("click", () =>
       deleteExperience(workexperience.id),

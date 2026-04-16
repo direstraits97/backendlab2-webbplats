@@ -8,8 +8,7 @@ body {
   );
   margin: 0;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  @extend %flexandcolumn;
   line-height: 1.8em;
   font-family: base.$font-content;
 }
@@ -21,9 +20,8 @@ header {
     height: 250px;
   }
   #topheader {
-    display: flex;
+    @extend %flexandalign;
     justify-content: space-around;
-    align-items: center;
     color: base.$color-text-secondary;
   }
 }
@@ -31,8 +29,7 @@ nav {
   font-family: base.$font-content;
   background-color: base.$color-background-primary;
   width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %centerchild;
   border-radius: 10px;
   ul {
     list-style: none;
@@ -69,11 +66,9 @@ footer {
   border-top: 3px solid base.$color-background-primary;
 }
 form {
-  display: flex;
-  flex-direction: column;
+  @extend %flexandcolumn;
   width: 35%;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %centerchild;
   border: 3px solid base.$color-background-primary;
   margin-bottom: 100px;
   background-color: base.$color-background-quaternary;
@@ -86,9 +81,8 @@ input {
   font-size: 1rem;
 }
 textarea {
-  font-family: base.$font-content;
+  @extend input;
   height: 150px;
-  font-size: 1rem;
 }
 #addform {
   border: none;
@@ -96,11 +90,9 @@ textarea {
   height: 50px;
   width: 20%;
   min-width: 130px;
-  display: flex;
-  align-items: center;
+  @extend %flexandalign;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %centerchild;
   margin-top: 30px;
   font-family: base.$font-content;
   font-size: 1rem;
@@ -117,8 +109,7 @@ textarea {
 
 article {
   width: 40%;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %centerchild;
   background-color: base.$color-background-tertiary;
   border-radius: 10px;
   padding: 1.5%;
@@ -142,4 +133,28 @@ article {
   background-color: base.$color-confirm;
   padding: 1%;
   border-radius: 5px;
+}
+#smallscreenheading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2.5rem;
+  display: none;
+}
+#openmenu {
+  border: none;
+  background: none;
+  display: none;
+  img {
+    width: 110px;
+    height: 110px;
+  }
+}
+#closemenu {
+  @extend #openmenu;
+}
+#menuchoice {
+  display: none;
+}
+.show {
+  right: 0;
 }

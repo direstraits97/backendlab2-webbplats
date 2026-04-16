@@ -1,0 +1,67 @@
+@use "base";
+
+@media (max-width: 1024px) {
+  nav {
+    width: 90%;
+  }
+  article {
+    width: 70%;
+  }
+  form {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  article {
+    width: 90%;
+  }
+  form {
+    width: 90%;
+  }
+  #logo {
+    width: 175px;
+    height: 175px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  #bigscreenheading {
+    display: none;
+  }
+  #smallscreenheading {
+    display: block;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    border-radius: 0;
+    right: -110%;
+    transition: right 300ms ease-out;
+    height: 100vh;
+    width: 100vw;
+    background-color: base.$color-background-quaternary;
+    ul {
+      flex-direction: column;
+      align-items: flex-end;
+      margin: 0;
+      height: 100vh;
+      justify-content: space-evenly;
+      a {
+        margin-right: 3rem;
+        color: base.$color-text-secondary;
+      }
+    }
+  }
+  #menuchoice {
+    @extend #smallscreenheading;
+  }
+  #openmenu {
+    @extend #smallscreenheading;
+  }
+  #closemenu {
+    @extend #smallscreenheading;
+  }
+}

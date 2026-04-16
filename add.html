@@ -18,11 +18,24 @@
   <body>
     <header>
       <div id="topheader">
-        <img src="/bilder/tslab2logo.svg" alt="">
-        <h1>Mitt CV</h1>
+        <img id="logo" src="/bilder/tslab2logo.svg" alt="">
+        <h1 id="bigscreenheading">Mitt CV</h1>
+        <button
+          id="openmenu"
+          aria-label="Öppna meny"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <img src="/ikoner/openmenu.svg" alt="">
+        </button>
       </div>
-      <nav>
+      <nav id="navbar">
         <ul>
+          <li id="menuchoice">
+            <button id="closemenu" aria-label="Stäng meny">
+              <img src="/ikoner/closemenu.svg" alt="">
+            </button>
+          </li>
           <li><a href="/index.html">Startsidan</a></li>
           <li><a href="/add.html">Lägg till</a></li>
           <li><a href="/about.html">Om sidan</a></li>
@@ -30,6 +43,7 @@
       </nav>
     </header>
     <main>
+      <h1 id="smallscreenheading">Mitt CV</h1>
       <section>
         <h2>Lägg till ny arbetslivserfarenhet</h2>
         <form id="addexperienceform">
@@ -46,7 +60,10 @@
           <input type="date" id="enddate" name="enddate">
           <label for="description">Beskrivning:</label>
           <textarea id="description"></textarea>
-          <button id="addform">Lägg till</button>
+          <button id="addform">
+            Lägg till
+            <img src="/ikoner/add.svg" alt="">
+          </button>
           <div id="confirmcontainer"></div>
         </form>
       </section>
@@ -57,5 +74,6 @@
       <p>DT207G</p>
     </footer>
     <script type="module" src="/src/js/addexperience.js"></script>
+    <script type="module" src="/src/js/hamburger.js"></script>
   </body>
 </html>

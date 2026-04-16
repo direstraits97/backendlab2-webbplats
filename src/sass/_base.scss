@@ -20,3 +20,17 @@ $color-confirm: rgb(8, 49, 8);
 //Fonter
 $font-title: "Petit Formal Script", cursive;
 $font-content: "Roboto", sans-serif;
+
+//Placeholders
+%centerchild {
+  margin-left: auto;
+  margin-right: auto;
+}
+%flexandcolumn {
+  display: flex;
+  flex-direction: column;
+}
+%flexandalign {
+  display: flex;
+  align-items: center;
+}

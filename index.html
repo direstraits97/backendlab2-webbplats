@@ -18,11 +18,24 @@
   <body>
     <header>
       <div id="topheader">
-        <img src="/bilder/tslab2logo.svg" alt="">
-        <h1>Mitt CV</h1>
+        <img id="logo" src="/bilder/tslab2logo.svg" alt="">
+        <h1 id="bigscreenheading">Mitt CV</h1>
+        <button
+          id="openmenu"
+          aria-label="Öppna meny"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <img src="/ikoner/openmenu.svg" alt="">
+        </button>
       </div>
-      <nav>
+      <nav id="navbar">
         <ul>
+          <li id="menuchoice">
+            <button id="closemenu" aria-label="Stäng meny">
+              <img src="/ikoner/closemenu.svg" alt="">
+            </button>
+          </li>
           <li><a href="/index.html">Startsidan</a></li>
           <li><a href="/add.html">Lägg till</a></li>
           <li><a href="/about.html">Om sidan</a></li>
@@ -30,6 +43,7 @@
       </nav>
     </header>
     <main>
+      <h1 id="smallscreenheading">Mitt CV</h1>
       <section>
         <h2>Mina arbetslivserfarenheter:</h2>
         <div id="collectedexperience"></div>
@@ -41,5 +55,6 @@
       <p>DT207G</p>
     </footer>
     <script type="module" src="/src/js/printexperience.js"></script>
+    <script type="module" src="/src/js/hamburger.js"></script>
   </body>
 </html>
