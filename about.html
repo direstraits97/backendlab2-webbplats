@@ -1,25 +1,24 @@
 <!doctype html>
 <html lang="sv">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/sass/main.scss" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/sass/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <title>Mitt CV | Startsida</title>
   </head>
   <body>
     <header>
       <div id="topheader">
-        <img src="/bilder/tslab2logo.svg" alt="" />
+        <img src="/bilder/tslab2logo.svg" alt="">
         <h1>Mitt CV</h1>
       </div>
       <nav>
@@ -35,10 +34,34 @@
         <h2>Om sidan</h2>
         <article class="about">
           <h3>Om webbplatsen:</h3>
+          <p>
+            Denna webbplats har som syfte att lagra arbetslivserfarenheter för
+            användaren, och dessa skrivs sedan ut på startsidan efter att
+            formuläret under "Lägg till" fyllts i på rätt sätt. Webbplatsen
+            lagrar informationen med hjälp av den inbyggda servern i SQLite, mer
+            specifikt har ett npm-paket vid namn "better-sqlite3" använts.
+          </p>
         </article>
-        <article class="about lastabout">
+        <article class="about">
           <h3>Slutsatser:</h3>
+          <p>
+            Arbetsprocessen har varit smidig för denna uppgift. Innan jag
+            började kändes det stort och krångligt, men också väldigt
+            intressant. Många av momenten för att skapa API:et var bekanta sedan
+            tidigare laboration, så det gick rätt så snabbt att få till. Att
+            testa API:et med testverktyget Bruno var också till stor hjälp under
+            utvecklingen för att kontrollera funktionaliteten innan jag började
+            göra anrop. Webbplatsens funktionalitet gick också snabbt att få
+            till då det innehåller mycket repetition från sådant vi gjort många
+            gånger tidigare. Jag hade dock lite problem med att använda "DELETE"
+            mot API:et. Det raderades som det skulle, men det försvann bara från
+            webbplatsen när den laddades om och det dök upp felmeddelanden i
+            konsolen vid tryck på radera-knappen. Jag fick därför ändra på vad
+            API:et skulle svara med vid dessa anrop, så att den laddade in alla
+            tillgängliga objekt ännu en gång i en uppdaterad version.
+          </p>
         </article>
+      </section>
     </main>
     <footer>
       <p>JOBA1602</p>
